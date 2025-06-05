@@ -1,11 +1,14 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { ArrowRight, Globe, Shield, Sparkles, Wallet, Zap } from 'lucide-react'
 
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 import { Button } from '@/shared/ui/kit/button'
+import { LanguageSwitcher } from '@/shared/ui/language-switcher'
 
 export default function HomePage() {
+  const t = useTranslations()
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Animated Background */}
@@ -24,7 +27,7 @@ export default function HomePage() {
               <Wallet className="h-5 w-5 text-white" />
             </div>
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-xl font-bold text-transparent">
-              CryptoCoffee
+              {t('common.appName')}
             </span>
           </Link>
 
@@ -46,12 +49,13 @@ export default function HomePage() {
 
           {/* CTA Section */}
           <div className="flex items-center space-x-3">
+            <LanguageSwitcher />
             <Button className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-6 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-500 hover:to-blue-500 hover:shadow-purple-500/25">
               <Sparkles className="mr-2 h-4 w-4" />
-              Donate Now
+              {t('donation.send')}
             </Button>
             {/* Wallet */}
-            <ConnectButton label="Connect wallet" />
+            <ConnectButton label={t('wallet.connect')} />
           </div>
         </div>
       </header>
@@ -82,13 +86,9 @@ export default function HomePage() {
 
             <div className="space-y-6">
               <p className="max-w-lg text-xl leading-relaxed text-white/90">
-                The revolutionary platform that transforms how creators receive
-                support.
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text font-semibold text-transparent">
-                  {' '}
-                  Powered by blockchain technology
-                </span>
-                , designed for the future.
+                {t('home.title')}
+                <br />
+                <span className="text-base">{t('home.subtitle')}</span>
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -97,7 +97,7 @@ export default function HomePage() {
                   className="group rounded-full bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 px-8 py-4 text-lg font-bold text-white shadow-2xl transition-all duration-500 hover:scale-105 hover:from-purple-500 hover:via-pink-500 hover:to-blue-500 hover:shadow-purple-500/50"
                 >
                   <Zap className="mr-2 h-5 w-5 group-hover:animate-spin" />
-                  Launch Your Page
+                  {t('home.getStarted')}
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
                 <Button
@@ -106,7 +106,7 @@ export default function HomePage() {
                   className="rounded-full border-2 border-white/30 bg-white/5 px-8 py-4 text-lg font-bold text-white backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-purple-400/50 hover:bg-white/10"
                 >
                   <Globe className="mr-2 h-5 w-5" />
-                  Explore Creators
+                  {t('home.howItWorks')}
                 </Button>
               </div>
             </div>
@@ -116,20 +116,20 @@ export default function HomePage() {
               {[
                 {
                   icon: Shield,
-                  title: 'Secure',
-                  desc: 'Blockchain protected',
+                  title: t('home.features.secure.title'),
+                  desc: t('home.features.secure.description'),
                   color: 'from-green-400 to-emerald-500',
                 },
                 {
                   icon: Zap,
-                  title: 'Instant',
-                  desc: 'Lightning fast',
+                  title: t('home.features.fast.title'),
+                  desc: t('home.features.fast.description'),
                   color: 'from-yellow-400 to-orange-500',
                 },
                 {
                   icon: Globe,
-                  title: 'Global',
-                  desc: 'Worldwide access',
+                  title: t('home.features.transparent.title'),
+                  desc: t('home.features.transparent.description'),
                   color: 'from-blue-400 to-purple-500',
                 },
               ].map((feature, index) => (
@@ -159,7 +159,9 @@ export default function HomePage() {
                   {/* Crypto Wallet Interface */}
                   <div className="rounded-2xl border border-white/10 bg-black/20 p-6">
                     <div className="mb-4 flex items-center justify-between">
-                      <span className="text-sm text-white/70">Your Wallet</span>
+                      <span className="text-sm text-white/70">
+                        {t('wallet.balance')}
+                      </span>
                       <div className="h-2 w-2 animate-pulse rounded-full bg-green-400"></div>
                     </div>
                     <div className="mb-2 text-2xl font-bold text-white">
@@ -231,7 +233,7 @@ export default function HomePage() {
                   <Wallet className="h-5 w-5 text-white" />
                   <div>
                     <div className="text-sm font-bold text-white">
-                      Connected
+                      {t('wallet.connected')}
                     </div>
                     <div className="text-xs text-white/80">MetaMask</div>
                   </div>

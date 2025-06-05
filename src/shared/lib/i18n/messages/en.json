@@ -1,0 +1,57 @@
+{
+  "common": {
+    "appName": "Buy Me a Crypto Coffee",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "home": {
+    "title": "Support Your Favorite Creators with Crypto",
+    "subtitle": "Send cryptocurrency donations easily and securely",
+    "getStarted": "Get Started",
+    "howItWorks": "How It Works",
+    "features": {
+      "title": "Features",
+      "secure": {
+        "title": "Secure Transactions",
+        "description": "All transactions are processed through secure blockchain networks"
+      },
+      "fast": {
+        "title": "Fast & Easy",
+        "description": "Send crypto donations in just a few clicks"
+      },
+      "transparent": {
+        "title": "Transparent",
+        "description": "All transactions are publicly verifiable on the blockchain"
+      }
+    }
+  },
+  "wallet": {
+    "connect": "Connect Wallet",
+    "disconnect": "Disconnect",
+    "connected": "Connected",
+    "notConnected": "Not Connected",
+    "balance": "Balance",
+    "address": "Address"
+  },
+  "donation": {
+    "title": "Make a Donation",
+    "amount": "Amount",
+    "message": "Message (optional)",
+    "send": "Send Donation",
+    "sending": "Sending...",
+    "success": "Donation sent successfully!",
+    "error": "Failed to send donation",
+    "selectCurrency": "Select Currency"
+  },
+  "profile": {
+    "title": "Profile",
+    "donations": "Donations",
+    "received": "Received",
+    "sent": "Sent",
+    "settings": "Settings"
+  }
+}
