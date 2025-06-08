@@ -1,5 +1,5 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit'
-import { sepolia } from 'wagmi/chains'
+import { anvil, sepolia } from 'wagmi/chains'
 
 export const config = getDefaultConfig({
   appName: 'CoffeeCrypto',
@@ -12,6 +12,7 @@ export const config = getDefaultConfig({
     // base,
     // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [sepolia] : []),
     sepolia,
+    anvil,
   ],
   ssr: true,
 })

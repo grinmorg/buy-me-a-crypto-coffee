@@ -50,10 +50,6 @@ export default function HomePage() {
           {/* CTA Section */}
           <div className="flex items-center space-x-3">
             <LanguageSwitcher />
-            <Button className="rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-6 font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-500 hover:to-blue-500 hover:shadow-purple-500/25">
-              <Sparkles className="mr-2 h-4 w-4" />
-              {t('donation.send')}
-            </Button>
             {/* Wallet */}
             <ConnectButton label={t('wallet.connect')} />
           </div>

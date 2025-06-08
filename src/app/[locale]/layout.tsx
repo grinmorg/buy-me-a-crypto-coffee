@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Buy me a crypto coffee',
+  title: 'Crypto Coffee',
   description:
     'The revolutionary platform that transforms how creators receive support. Powered by blockchain technology, designed for the future.',
 }
