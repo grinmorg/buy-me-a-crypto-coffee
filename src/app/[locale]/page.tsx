@@ -1,5 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import { ArrowRight, Globe, Shield, Sparkles, Wallet, Zap } from 'lucide-react'
+import { ArrowRight, Globe, Shield, Wallet, Zap } from 'lucide-react'
 
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
